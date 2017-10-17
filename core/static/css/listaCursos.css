@@ -1,0 +1,54 @@
+.c1{
+	text-align: center;
+	color: #231f20;
+}
+
+h2 {
+	text-align: center;
+	color: #231f20;
+	
+}
+
+h3{
+    text-align: center;
+	color:#231f20; 
+}
+
+.blocos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+	
+}
+
+article {
+    height: 320px;
+    text-align: center;
+    flex-basis: 45%;
+    padding: 0px 1px;
+    border: 2.6px solid;
+    border-color: rgba(0,0,0,0.0);
+    box-shadow: 4px 4px 11px 0px #231f20;
+    border-radius: 5px;
+    margin: 25px 0px;
+    
+}
+
+
+
+article > img {
+    width: 100%;
+    height: 80%;
+}
+
+.blocos > article > h3 {
+    margin: 0;
+    padding: 10px;
+}
+
+
+a {
+	color: #fdc236;
+	text-decoration: none;
+}

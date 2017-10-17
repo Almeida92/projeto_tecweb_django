@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Faculdade Impacta</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/mediaquery.css">
+	<link rel="stylesheet" href="/static/css/listaCursos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Faculdade Impacta</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li  class="activate"><a href="listaCursos.html">Lista de Cursos</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+				<li><a href="contato.html">Contato</a></li>
+				<li><a href="entrar.html">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+		{% block content %}
+        {% endblock %}
+	</section>
+
+    <footer>
+        <div class="copyright">© IMPACTA 2015. Todos os direitos reservados. Tel.: 11 3254-8300 / CAMPUS BARRA FUNDA - Av. Rudge, 315</div>
+	</footer>
+</body>
+</html>

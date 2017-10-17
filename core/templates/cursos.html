@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="c1">CURSOS</h2>
+<div class="blocos">
+	{% for curso in cursos %}
+		<a href="{{ curso.path }}">
+			<article>
+				<img src="{% static curso.img %}" alt="{{ curso.alt }}"/>
+				<h3>{{ curso.nome }}</h3>
+			</article>
+		</a>
+	{% endfor %}
+</div>
+{% endblock %}
