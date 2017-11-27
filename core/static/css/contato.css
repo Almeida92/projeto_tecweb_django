@@ -1,0 +1,39 @@
+.cad {
+    display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
+    padding: 15px 0px;
+    border: 2.6px solid;
+    border-color: rgba(0,0,0,0.0);
+    box-shadow: 4px 4px 11px 0px #231f20;
+    border-radius: 15px;
+    margin: 2% 11%;
+	
+}
+
+
+input{
+	color: #fdc236;
+	box-shadow: 0.5px 0.5px 1px 0.5px #231f20;
+	border-radius: 4px;
+}
+
+button{
+	cursor: pointer;
+	border-radius: 6px;
+	color: #fdc236;
+	box-shadow: 1px 1px 2px 1px #231f20;
+	background-color: #231f20;
+}
+
+a {
+	color: #fdc236;
+	text-decoration: none;
+}
+
+
+h1{
+	color: #231f20;
+	text-align: center;
+	
+}

@@ -22,7 +22,24 @@ def cursos(request):
 
 def noticias(request):
     context = {
-        ##"cursos": Curso.objects.all(),
         "noticias_activate": True
     }
     return render(request, 'noticias.html', context)
+
+def contato(request):
+    context = {
+        "contato_activate": True
+    }
+    return render(request, 'contato.html', context)
+
+def entrar(request):
+    context = {
+        "entrar_activate": True
+    }
+    return render(request, 'entrar.html', context)
+
+def erro(request):
+    context = {
+        "entrar_activate": True
+    }
+    return render(request, 'erro.html', context)

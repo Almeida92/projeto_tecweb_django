@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="/static/css/entrar.css">
+{% endblock %}
+{% block content %}
+<h2 class="acesso"> ACESSE SUA CONTA </h2>
+<section class="blocos">
+	<article class="loginsenha">
+		<form method="POST">
+			<label for="login">RA</label>
+			<input type='text' name="login" id="login"></br>
+			</br>
+			<label for="senha">Senha</label>
+			<input type='password' name="senha" id="senha"></br>
+			</br>
+			<input name="lembrar" type="checkbox">Lembre-se de mim</br>
+			<button type="submit">Acessar</button>
+		</form>
+		<p><a href="Esqueci_Minha_Senha.html"> Esqueceu sua senha?</a></p>
+	</article>
+</section>
+
+<p> Ainda não tem uma conta? <a href="cadastroUsuarios.html">Cadastra-se.</a></p>
+{% endblock %}

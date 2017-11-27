@@ -1,0 +1,55 @@
+.blocos {
+    margin: 0 auto;
+    width: 65%;
+}
+
+.blocos > article {
+	color: #231f20;
+    text-align: center;
+    width: 48%;
+    height: 300px;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0px 1px;
+    border: 2.6px solid;
+    border-color: rgba(0,0,0,0.0);
+    box-shadow: 4px 4px 11px 0px #231f20;
+    border-radius: 15px;
+	margin-top: 30px;
+}
+form {
+    font-weight: bold;
+	margin-top: 50px;
+}
+
+h2 {
+	text-align: center;
+    color: #231f20;
+	background-color: #fdc236;
+	padding: 10px;
+	margin-left: 400px;
+	margin-right: 400px;
+}
+
+button {
+	margin-top: 20px;
+	cursor: pointer;
+	border-radius: 6px;
+	color: #fdc236;
+	box-shadow: 1px 1px 2px 1px #231f20;
+	background-color: #231f20;
+}
+
+p {
+	text-align: center;
+	font-weight: bold;
+}
+
+a {
+	color: #231f20;
+}
+
+.a {
+	color: #231f20;
+	text-decoration: none;
+}

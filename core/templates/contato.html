@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="/static/css/contato.css">
+{% endblock %}
+{% block content %}
+    <h1>FALE CONOSCO!</h1>
+
+<div class="cad">
+<form METHOD="POST" class="centro">
+	<br/><label for="nome" class="alinha">Nome:</label></br>
+	<input type="text" name="nome" class="bloco" required="true" >
+	<br/>
+	</br><label for="email" class="alinha">E-mail:</label></br>
+
+	<input type="email" name="email" class="bloco" required="true"></br>
+	</br><label for="contato" class="alinha">Contato:</label></br>
+	<input type="text" name="contato" class="bloco" required="true"></br>
+
+	</br><label for="assunto" class="alinha">Assunto:</label></br>
+	<input type="text" name="assunto" class="bloco" placeholder="Sugestão"></br>
+
+	</br><label for ="mensagem" class="alinha">Mensagem:</label></br>
+	<textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem" class="alinhacaixa"></textarea>
+	</br>
+	
+	<button type="submit">Enviar</button>
+	<button type="reset">Limpar</button>
+</div>
+</form>
+
+{% endblock %}
