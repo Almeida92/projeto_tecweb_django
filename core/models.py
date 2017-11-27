@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib import admin
+
 
 # Create your models here.
 class Curso(models.Model):
@@ -87,7 +89,20 @@ class Turma(models.Model):
     turno = models.CharField("Turno",max_length=15)
 
     def __str__(self):
-        return self.disciplina.nome + " - " +self.professor
+        return self.disciplina.nome + " - " +self.professor.nome
+
+class Matricula(models.Model):
+    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
+    disciplinaofertada = models.ForeignKey(DisciplinaOfertada, on_delete=models.CASCADE)
+    Turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.aluno.nome
+
+class MatriculaAdmin(admin.ModelAdmin):
+    list_filter = ('aluno')
+
+
     
 
 
