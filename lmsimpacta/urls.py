@@ -24,5 +24,4 @@ urlpatterns = [
     url(r'^contato/', contato),
     url(r'^entrar/', entrar),
     url(r'^$', index),
-    url(r'^', erro),
 ]

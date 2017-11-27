@@ -99,8 +99,49 @@ class Matricula(models.Model):
     def __str__(self):
         return self.aluno.nome
 
-class MatriculaAdmin(admin.ModelAdmin):
-    list_filter = ('aluno')
+class Questao (models.Model):
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+    disciplinaofertada = models.ForeignKey(DisciplinaOfertada, on_delete=models.CASCADE)
+    turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
+    data_limite = models.DateField("Data Limite")
+    descricao = models.TextField("Descricao")
+    data = models.DateField("Data")
+
+    def __str__(self):
+        return str(self.data)
+
+class Resposta(models.Model):
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+    disciplinaofertada = models.ForeignKey(DisciplinaOfertada, on_delete=models.CASCADE)
+    turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
+    questao = models.ForeignKey(Questao, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.questao.data_limite)
+
+class ArquivoQuestao(models.Model):
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+    disciplinaofertada = models.ForeignKey(DisciplinaOfertada, on_delete=models.CASCADE)
+    turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
+    questao = models.ForeignKey(Questao, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.questao.data) + " - " + str(self.questao.descricao)
+
+class ArquivoResposta(models.Model):
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+    disciplinaofertada = models.ForeignKey(DisciplinaOfertada, on_delete=models.CASCADE)
+    turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
+    questao = models.ForeignKey(Questao, on_delete=models.CASCADE)        
+    Aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)  
+
+    def __str__(self):
+        return str(self.questao.data_turma) + " - " + str(self.Aluno.nome)      
+
+    
+
+
+
 
 
     
