@@ -1,1 +1,44 @@
 {% extends 'base.html' %}
+{% block style %}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+{% block content %}
+<section class="banner">
+	   <img src='/static/img/infra.jpeg' alt="Computadores" />
+    </section>
+		<h3 class="diferenciais"> Diferenciais </h3>
+			<section class="temas_dif">
+			<div class="blocos">
+                <article>
+				    <h3>Conhecimento sem limites</h3>
+                    <p>Desde 1988 a busca pelas melhores  referências profissionais e acadêmicas nos aproximou do que há de mais inovador no ensino de tecnologia para que aplicassem estes conhecimentos para ajudar a solucionar os desafios que a humanidade enfrenta.</p>
+                </article>
+                <article>
+					<h3>Metodologia de ensino modelo</h3>
+					<p>A Editora que produz todo material didático dos cursos, desenvolvido e atualizado constantemente em parceria com profissionais atuantes no mercado, é responsável por uma metodologia de ensino considerada como referência pela ABTD e entidades de Recursos Humanos.</p>
+                </article>
+                <article>
+					<h3>Mais de 300 treinamentos e 40 certificações</h3>
+					<p>O portfólio de cursos especializados em tecnologia e mercado digital mais completo da América Latina, fundamentado na expertise de um grupo educacional pioneiro e instrutores altamente qualificados.</p>
+                </article>
+                <article>
+					<h3>Certificação reconhecida no mercado</h3>
+					<p>Além de certificações de peso internacional, possuimos um dos títulos mais respeitados do mercado, preparado sob medida para oferecer e atestar habilidades de profissionais especializados.</p>
+                </article>
+			</section>
+		<h3 class="depoimentos"> Depoimentos </h3>
+            <h4 class="nome">Fabiano Bregalda - Analista de Suporte</h4>
+			<div class="comentario">
+				<img class="circular--square" src='/static/img/fabiano.jpg' alt="Fabiano" />
+                <p>"Após estudos estou realizando meu sonho de trocar de emprego e atuar no mundo da tecnologia. Após enviar meu currículo, fui chamado por empresas de grande porte. Estou ampliando meus estudos na prática com uma visão mais concreta do mercado de trabalho na área de TI, pela excelente estrutura e pelos instrutores altamente qualificados que foram oferecidos pela instituição. Continuarei meus estudos voltados devido ao seu elevadíssimo conceito, consegui um aumento na produtividade em meus serviços e obtive várias portas abertas."</p>
+			</div>
+
+<!-- Call to action -->
+	<section class="calltoaction">
+       <h2>Inscrições Abertas para Vestibular</h2>
+       <div class="btn btn-black">
+          <a href="#">Matricule-se</a>
+        </div>
+        <div class="clear"></div>
+    </section>
+{% endblock %}
