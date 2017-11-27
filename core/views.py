@@ -8,12 +8,21 @@ def index(requisicao):
         "Pagina":"Homepage",
         "usuario": "Felipe",
         "logado": False,
-        "idade": 17
+        "idade": 17,
+        "home_activate": True
     }
     return render(requisicao, "index.html",contexto)
 
 def cursos(request):
     context = {
-        "cursos": Curso.objects.all()
+        "cursos": Curso.objects.all(),
+        "cursos_activate": True
     }
     return render(request, 'cursos.html', context)
+
+def noticias(request):
+    context = {
+        ##"cursos": Curso.objects.all(),
+        "noticias_activate": True
+    }
+    return render(request, 'noticias.html', context)
