@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.models import Curso, Aluno
+from core.models import Curso, Aluno, Resposta
 
 def index(requisicao):
     contexto = {
@@ -41,7 +41,7 @@ def entrar(request):
 def boletim(request):
 
     context = {
-        "alunos": Aluno.objects.all(),
+        "respostas": Resposta.objects.all(),
         
     }
     return render(request, 'boletim.html', context)

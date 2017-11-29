@@ -12,10 +12,10 @@
             <th>Nome</th>
             <th>Curso</th>
         </tr>
-        {% for aluno in alunos %}
+        {% for resposta in respostas %}
             <tr>
-                <td>{{aluno.nome}}</td>
-                <td>{{aluno.id_curso.nome}}</td>
+                <td>{{resposta.aluno}}</td>
+                <td>{{resposta.aluno.id_curso.nome}}</td>
             </tr>
         {% endfor %}
     </table>
