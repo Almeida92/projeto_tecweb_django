@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from core.views import index, cursos, noticias, contato, entrar, erro
+from core.views import index, cursos, noticias, contato, entrar, erro, boletim
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^noticias/', noticias),
     url(r'^contato/', contato),
     url(r'^entrar/', entrar),
+    url(r'^boletim/', boletim),
     url(r'^$', index),
 ]

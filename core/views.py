@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.models import Curso
+from core.models import Curso, Aluno
 
 def index(requisicao):
     contexto = {
@@ -38,7 +38,16 @@ def entrar(request):
     }
     return render(request, 'entrar.html', context)
 
+def boletim(request):
+
+    context = {
+        "alunos": Aluno.objects.all(),
+        
+    }
+    return render(request, 'boletim.html', context)
+
 def erro(request):
+
     context = {
         "entrar_activate": True
     }

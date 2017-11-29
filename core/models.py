@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib import admin
 
-
 # Create your models here.
 class Curso(models.Model):
     nome = models.CharField("Nome", max_length=50)
@@ -115,6 +114,10 @@ class Resposta(models.Model):
     disciplinaofertada = models.ForeignKey(DisciplinaOfertada, on_delete=models.CASCADE)
     turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
     questao = models.ForeignKey(Questao, on_delete=models.CASCADE)
+    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE, blank=True)
+    data_avaliacao = models.DateField("Data Avaliação", blank=True)
+    nota = models.DecimalField("Nota",max_digits=4,decimal_places=2, blank=True)
+    data_envio = models.DateField("Data Envio", blank=True)
 
     def __str__(self):
         return str(self.questao.data_limite)

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="/static/css/contato.css">
+{% endblock %}
+{% block content %}
+    <h1>Boletim</h1>
+
+<div class="cad">
+    <table style="border:1px;">
+        <tr>
+            <th>Nome</th>
+            <th>Curso</th>
+        </tr>
+        {% for aluno in alunos %}
+            <tr>
+                <td>{{aluno.nome}}</td>
+                <td>{{aluno.id_curso.nome}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</form>
+
+{% endblock %}
